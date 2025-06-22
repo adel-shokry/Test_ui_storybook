@@ -1,0 +1,29 @@
+@use '../bootstrap/base-bootstrap';
+
+.select-time {
+  @extend .row;
+  @extend .row-gap-4;
+  @extend .user-select-none;
+}
+
+.select-time input:checked + .select-time-label {
+  @extend .bg-success;
+  @extend .text-white;
+}
+
+.select-time-label {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .px-4;
+  @extend .py-3;
+  @extend .bg-white;
+  @extend .border;
+  @extend .rounded;
+  @extend .fw-bold;
+  @extend .fs-4;
+  cursor: pointer;
+}
+
+.select-time-label.disabled {
+  @extend .pe-none;
+}

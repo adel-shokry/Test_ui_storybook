@@ -1,0 +1,95 @@
+:root {
+  --mainFont: 'Neo Sans W23', Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+  --dark-black-01: rgba(0, 0, 0, 0.1);
+}
+
+html,
+body,
+mat-sidenav-container,
+mat-sidenav-content,
+main {
+  height: 100%;
+  overflow: auto !important;
+}
+
+html,
+body {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+main {
+  min-height: 100vh;
+}
+
+@media print {
+  /* All your print styles go here */
+  nwc-header,
+  nwc-footer,
+  mat-sidenav,
+  nwc-download-mobile-app,
+  nwc-breadcrumbs {
+    display: none !important;
+  }
+}
+
+i.mx-0::before {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+[dir='ltr'] .fa-ul {
+  margin-left: 1rem;
+}
+
+[dir='rtl'] .fa-ul {
+  margin-inline-start: 1rem;
+  margin-left: unset;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #999;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    border-radius: 4px;
+    background: #777;
+  }
+}

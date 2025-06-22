@@ -1,0 +1,164 @@
+@use '../bootstrap/base-bootstrap';
+
+.tabs-toggle {
+  @extend .rounded-top-1;
+  @extend .bg-white;
+  @extend .border;
+  @extend .border-bottom-0;
+  @extend .border-primary;
+  @extend .border-opacity-10;
+  @extend .text-primary;
+  @extend .fs-6;
+  @extend .fw-bold;
+  height: 2.25rem; // 44px
+  min-height: 2.25rem; // 44px
+  transition: all 0.3s ease-in-out;
+}
+
+.tabs-toggle.active {
+  @extend .bg-primary;
+  @extend .bg-opacity-10;
+}
+
+.btn.pe-0 {
+  @extend .pe-0;
+}
+
+.btn.pe-2 {
+  @extend .pe-2;
+}
+
+.btn.btn-outline-primary {
+  @extend .bg-white;
+  @extend .text-primary;
+}
+
+.btn.btn-outline-primary:hover {
+  @extend .bg-primary;
+  @extend .text-primary;
+  @extend .bg-opacity-10;
+}
+
+.custom-account-btn {
+  @extend .bg-light-blue;
+  @extend .bg-opacity-50;
+  @extend .text-primary;
+  @extend .text-opacity-75;
+  @extend .rounded;
+  @extend .p-3;
+  border: none;
+  outline: none;
+}
+
+.custom-account-btn:hover {
+  @extend .bg-opacity-80;
+}
+
+.btn.btn-link.pe-0 {
+  @extend .pe-0;
+}
+
+.btn.btn-link.ps-0 {
+  @extend .ps-0;
+}
+
+.btn.btn-link.fs-5 {
+  @extend .fs-5;
+}
+
+.scale-icon:hover {
+  transform: scale(1.05);
+}
+
+.btn-link.btn:disabled {
+  color: var(--bs-link-color);
+}
+
+.popup-footer .btn-link.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+  color: var(--bs-link-color);
+}
+
+.btn.btn-link {
+  @extend .text-decoration-none;
+}
+
+:is(button, a, nwc-icon-btn).btn {
+  @extend .d-inline-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @extend .py-0;
+}
+
+:is(button, a, nwc-icon-btn).btn:not(.btn-link, .accounts-btn, .reset-date) {
+  height: 2.75rem; // 44px
+  min-height: 2.75rem; // 44px
+}
+
+.btn.accounts-btn {
+  @extend .py-1;
+  @extend .fs-5;
+  @extend .fw-bold;
+}
+
+.btn:not([class*='btn-']) {
+  --bs-btn-active-border-color: transparent;
+}
+
+// * ICON BTN
+.icon-btn.btn,
+nwc-icon-btn.btn {
+  @extend .p-0;
+  width: 2.75rem; // 44px
+  min-width: 2.75rem; // 44px
+}
+
+mat-form-field :is(.icon-btn.btn, nwc-icon-btn.btn) {
+  width: unset;
+  min-width: unset;
+}
+
+nwc-icon-btn.btn {
+  @extend .rounded-circle;
+  @extend .px-0;
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.btn.btn-success {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+}
+
+.btn.btn-light-dark {
+  --bs-btn-color: #ffffffa8;
+  --bs-btn-bg: var(--dark-black-01);
+  --bs-btn-border-color: var(--dark-black-01);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--dark-black-01);
+  --bs-btn-hover-border-color: var(--dark-black-01);
+  --bs-btn-focus-shadow-rgb: 38, 133, 213;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--dark-black-01);
+  --bs-btn-active-border-color: rgba(0, 0, 0, 0.041);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(51, 51, 51, 0.125);
+  --bs-btn-disabled-color: #ffffff93;
+  --bs-btn-disabled-bg: var(--dark-black-01);
+  --bs-btn-disabled-border-color: rgba(0, 0, 0, 0.055);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  --bs-border-width: 0;
+}
+
+nwc-icon-btn[disabled='true'] {
+  pointer-events: none;
+}
+
+nwc-icon-btn[disabled='true'] > i {
+  color: #ccc;
+}

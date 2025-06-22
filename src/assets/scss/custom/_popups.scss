@@ -1,0 +1,122 @@
+@use '../bootstrap/base-bootstrap';
+
+mat-dialog-container .mdc-dialog__surface {
+  overflow: visible;
+}
+
+.popup-wrapper {
+  @extend .position-relative;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-stretch;
+  @extend .pt-7;
+  @extend .w-100;
+  min-height: 100px;
+}
+
+.popup-wrapper.has-upper-icon {
+  @extend .pt-8;
+}
+
+:is(.popup-wrapper.has-upper-icon, .popup-wrapper).no-padding {
+  @extend .pt-0;
+}
+
+.close-popup-btn {
+  @extend .position-absolute;
+  @extend .pt-4;
+  @extend .pb-0;
+  @extend .px-4;
+  @extend .text-light-navy;
+  @extend .border-0;
+  @extend .bg-transparent;
+  @extend .z-2;
+  outline: none;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.close-popup-btn,
+.close-popup-btn i {
+  line-height: 0.75; // 12px
+}
+
+.popup-upper-icon {
+  width: 6rem;
+  height: 6rem;
+  @extend .position-absolute;
+  @extend .top-0;
+  @extend .z-3;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @extend .text-white;
+  @extend .rounded-circle;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-upper-icon.primary {
+  @extend .bg-primary;
+}
+
+.popup-upper-icon.success {
+  @extend .bg-success;
+}
+
+.popup-upper-icon.info {
+  @extend .bg-info;
+}
+
+.popup-upper-icon.warning {
+  @extend .bg-warning;
+}
+
+.popup-upper-icon.danger {
+  @extend .bg-danger;
+}
+
+.popup-content {
+  @extend .flex-fill;
+  @extend .overflow-y-auto;
+}
+
+.max-height-popup-content {
+  max-height: calc(100vh - 2rem - 7.125rem - 1.5rem);
+}
+
+.max-height-popup-content-top-icon {
+  max-height: calc(100vh - 2rem - 7.125rem - 1.5rem - 7rem);
+}
+
+.popup-separator {
+  height: 2px;
+  @extend .bg-light-navy;
+}
+
+.popup-footer {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .gap-4;
+  @extend .py-4;
+  @extend .px-7;
+  @extend .bg-light-blue;
+  border-end-start-radius: var(--bs-border-radius);
+  border-end-end-radius: var(--bs-border-radius);
+}
+
+.popup-footer.lg-horizontal {
+  @extend .flex-lg-row;
+  @extend .align-items-stretch;
+  @extend .align-items-lg-center;
+  @extend .justify-content-center;
+  @extend .justify-content-lg-between;
+}
+
+.popup-footer button {
+  min-width: 240px;
+}
+
+.popup-footer .btn {
+  @extend .fw-bold;
+}

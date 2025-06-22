@@ -1,0 +1,38 @@
+:root {
+  --p-select-background: #fff;
+  --p-select-border-color: rgba(0, 0, 0, 0.32);
+  --p-select-border-radius: 6px;
+  --p-select-transition-duration: 0.2s;
+  --p-select-shadow: --p-select-shadow;
+  --p-select-padding-y: 0.5rem;
+  --p-select-padding-x: 0.75rem;
+  --p-select-color: --p-select-color;
+
+  --p-select-dropdown-color: #94a3b8;
+  --p-select-dropdown-width: 2.5rem;
+  --p-select-border-radius: 6px;
+
+  --p-anchor-gutter: 2px;
+
+  --p-select-overlay-background: #fff;
+  --p-select-overlay-color: #334155;
+  --p-select-overlay-border-color: #e2e8f0;
+  --p-select-overlay-border-radius: 6px;
+  --p-select-overlay-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+  --p-select-list-padding: 0.25rem 0.25rem;
+  --p-select-list-gap: 2px;
+
+  --p-select-option-selected-background: #e2e8f0;
+  --p-select-option-selected-color: #ffffff;
+
+  --p-select-option-padding: 0.5rem 0.75rem;
+  --p-select-option-color: #334155;
+  --p-select-option-border-radius: 4px;
+  --p-select-transition-duration: 2px;
+  --p-select-option-selected-focus-background: #334155;
+  --p-select-option-selected-focus-color: #fff;
+  --p-select-option-focus-background: #f1f5f9;
+  --p-select-option-focus-color: #1e293b;
+}

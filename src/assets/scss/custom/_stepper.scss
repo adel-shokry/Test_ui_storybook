@@ -1,0 +1,9 @@
+@use '../bootstrap/base-bootstrap';
+
+.step-line {
+  @extend .h-100;
+  @extend .my-0;
+  @extend .mx-auto;
+  @extend .bg-secondary-subtle;
+  width: 1px;
+}

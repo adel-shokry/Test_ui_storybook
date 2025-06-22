@@ -1,0 +1,52 @@
+@use '../bootstrap/base-bootstrap';
+
+.ct_textarea {
+  div {
+    display: block;
+    unicode-bidi: isolate;
+  }
+
+  * {
+    font-size: 12px !important;
+    font-weight: normal;
+    letter-spacing: -0.2px;
+    line-height: 1;
+  }
+
+  .row-equal {
+    @extend .d-flex;
+  }
+
+  .col {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  img,
+  svg {
+    vertical-align: middle;
+  }
+
+  img {
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+  }
+}
+
+[dir='rtl'] .pull-right {
+  float: right;
+}
+
+[dir='ltr'] .pull-right {
+  float: left;
+}

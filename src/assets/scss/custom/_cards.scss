@@ -1,0 +1,263 @@
+@use '../bootstrap/base-bootstrap';
+
+.row.flex-nowrap {
+  @extend .flex-nowrap;
+}
+
+.p-account {
+  @extend .position-relative;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+  @extend .p-4;
+}
+
+.q-account,
+.c-account {
+  @extend .position-relative;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-start;
+  @extend .p-4;
+  word-wrap: break-word;
+}
+
+.q-account {
+  height: 124px;
+}
+
+.q-account.active,
+.p-account.active,
+.c-account.active {
+  cursor: default;
+}
+
+nwc-general-card-panel.white-panel.p-0 {
+  padding: 0 !important;
+}
+
+.dark-panel,
+.white-panel,
+.primary-panel {
+  @extend .d-block;
+  @extend .rounded;
+  @extend .border;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.dark-panel.clickable,
+.white-panel.clickable,
+.primary-panel.clickable,
+.q-account,
+.q-account .radio-mark,
+.c-account,
+.c-account .radio-mark {
+  transition: all ease-in-out 0.3s;
+}
+
+:is(.dark-panel, .white-panel, .primary-panel):is(.row, .d-flex) {
+  @extend .d-flex;
+}
+
+.dark-panel {
+  @extend .bg-light-blue;
+  @extend .bg-opacity-50;
+  @extend .border-light-sec-blue;
+  @extend .border-opacity-50;
+}
+
+.dark-panel.clickable {
+  &.selected {
+    @extend .bg-white;
+    @extend .bg-opacity-100;
+    @extend .border-blue;
+    @extend .border-opacity-100;
+    box-shadow: 0px 0px 3px #0070cd33;
+  }
+
+  &:not(.selected):hover,
+  &:focus {
+    @extend .bg-light-blue;
+    @extend .bg-opacity-100;
+    @extend .border-blue;
+    @extend .border-opacity-50;
+    box-shadow: 0px 0px 3px #0070cd33;
+  }
+}
+
+.primary-panel.clickable {
+  @extend .bg-white;
+  @extend .bg-opacity-100;
+  @extend .border-light-blue;
+  @extend .border-opacity-100;
+  @extend .text-primary;
+  // box-shadow: 0px 0px 3px #0070cd33;
+
+  &.selected {
+    @extend .bg-primary;
+    @extend .bg-opacity-100;
+    @extend .border-primary;
+    @extend .border-opacity-100;
+    @extend .text-white;
+    @extend .pe-none;
+    // box-shadow: 0px 0px 3px #0070cd33;
+  }
+}
+
+.white-panel {
+  @extend .bg-white;
+  @extend .border-dark-grey;
+  @extend .border-opacity-20;
+
+  &[disabled='true'] {
+    @extend .bg-dark-grey;
+    @extend .bg-opacity-10;
+    .title > * {
+      @extend .fw-bold;
+      @extend .text-dark-grey;
+    }
+    .sub-title > * {
+      @extend .text-dark-grey;
+      @extend .text-opacity-50;
+    }
+    .end {
+      @extend .fw-bold;
+      @extend .text-dark-grey;
+    }
+  }
+}
+
+.white-panel.clickable {
+  &:focus,
+  &:active,
+  &:hover {
+    @extend .border-light-grey;
+    @extend .border-opacity-100;
+    box-shadow: 0px 3px 6px #3333330d;
+  }
+
+  &.selected {
+    @extend .border-blue;
+    @extend .border-opacity-20;
+    box-shadow: 0px 0px 3px #0070cd33;
+  }
+}
+
+.active-class .white-panel.clickable {
+  @extend .pe-none;
+  @extend .bg-blue;
+  @extend .border-blue;
+  @extend .border-opacity-20;
+  box-shadow: 0px 0px 3px #0070cd33;
+
+  *:is(.text-secondary, .text-primary) {
+    @extend .text-white;
+  }
+}
+
+// * Services Card
+.service-card-icon {
+  @extend .position-relative;
+  width: 4rem;
+  height: 2.5rem;
+  transform: rotateY(0deg);
+
+  i.custom-service-icon {
+    font-size: 2.5rem;
+    transform: translate(0.2rem, -50%);
+  }
+
+  i.custom-drop-icon {
+    @extend .d-inline-block;
+    font-size: 3rem;
+    transform: translateX(-1rem) translateY(-0.25rem);
+  }
+}
+
+html[dir='ltr'] .service-card-icon {
+  transform: rotateY(180deg);
+
+  i.custom-service-icon {
+    transform: translate(1rem, -50%);
+  }
+
+  i.custom-drop-icon {
+    transform: translateX(-0.8rem);
+  }
+}
+
+.service-favorite-icon {
+  @extend .position-absolute;
+  @extend .z-1;
+  @extend .border-0;
+  outline: none;
+  background-color: transparent;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
+}
+
+.service-new-badge-icon {
+  @extend .position-absolute;
+  @extend .z-1;
+  @extend .border-0;
+  @extend .bg-primary;
+  @extend .text-white;
+  @extend .fs-6;
+  @extend .py-1;
+  @extend .px-2;
+  @extend .rounded-1;
+  outline: none;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
+}
+
+.input-card {
+  @extend .row;
+  @extend .mb-3;
+  @extend .border;
+  @extend .rounded;
+  @extend .user-select-none;
+  border-color: #daebf8;
+  background-color: #f5faff;
+
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0;
+}
+
+.input-card .border {
+  border-color: #daebf8;
+}
+
+.input-card :is(input, select) {
+  @extend .w-25;
+  @extend .p-1;
+  @extend .mb-0;
+  @extend .bg-white;
+  @extend .border;
+  @extend .rounded-1;
+  @extend .text-center;
+}
+
+.input-card :is(input, select):focus-visible {
+  outline-color: #daebf8;
+}
+
+nwc-general-card-panel.water-drop-card {
+  @extend .text-dark;
+  @extend .fw-bold;
+  padding-block: 40px;
+  // background-image: url(/assets/svgs/water-drop-in-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 55px 80px;
+}
+
+[dir='ltr'] nwc-general-card-panel.water-drop-card {
+  background-position: 5% center;
+}
+
+[dir='rtl'] nwc-general-card-panel.water-drop-card {
+  background-position: 95% center;
+}

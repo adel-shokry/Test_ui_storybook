@@ -1,0 +1,118 @@
+@use '../bootstrap/base-bootstrap';
+
+mat-expansion-panel.mat-expansion-panel,
+mat-expansion-panel.mat-expansion-panel:not([class*='mat-elevation-z']) {
+  box-shadow: none;
+}
+
+mat-expansion-panel.mat-expansion-panel {
+  @extend .mb-3;
+}
+
+mat-expansion-panel .mat-expansion-panel-header {
+  @extend .user-select-none;
+  transition:
+    height 225ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 225ms cubic-bezier(0.4, 0, 0.2, 1),
+    margin 225ms cubic-bezier(0.4, 0, 0.2, 1),
+    padding 225ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 225ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+mat-accordion.mat-accordion .mat-expansion-panel:not(.mat-expanded),
+mat-accordion.mat-accordion
+  .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+  @extend .rounded;
+}
+
+.mat-expanded .mat-expansion-panel-header.mat-expanded {
+  border-block-end: 1px solid var(--bs-light-navy);
+  @extend .px-0;
+  @extend .mx-4;
+  @extend .border-opacity-80;
+  @extend .bg-white;
+  @extend .bg-opacity-100;
+  @extend .rounded-bottom-0;
+}
+
+.mat-expansion-panel-content .mat-expansion-panel-body {
+  @extend .pt-4;
+  @extend .px-4;
+}
+
+mat-expansion-panel.mat-expanded.mat-expansion-panel:not(
+    [class*='mat-elevation-z']
+  ) {
+  @extend .border-primary;
+  @extend .shadow-none;
+}
+
+mat-expansion-panel.mat-expansion-panel:not([class*='mat-elevation-z']) {
+  @extend .border;
+  @extend .border-light-navy;
+  @extend .border-opacity-80;
+  @extend .shadow-none;
+}
+
+.mat-expansion-panel-header,
+.mat-expansion-panel:not(.mat-expanded)
+  mat-expansion-panel-header.mat-expansion-panel-header:not(
+    [aria-disabled='true']
+  ):hover {
+  @extend .bg-light-blue;
+  @extend .bg-opacity-80;
+
+  .mat-expansion-panel-header-title {
+    @extend .text-primary;
+    @extend .fs-4;
+  }
+}
+
+mat-expansion-panel-header.mat-expansion-panel-header {
+  @extend .px-4;
+}
+
+mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator svg {
+  @extend .d-none;
+}
+
+mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator {
+  height: 1.1rem;
+  width: 1.3rem;
+  border-style: none;
+  transform: rotate(0deg);
+  // background: url('/assets/images/plus.png');
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+}
+
+.mat-expanded mat-expansion-panel-header {
+  .mat-expansion-indicator {
+    // background: url('/assets/images/min.png');
+  }
+}
+
+mat-expansion-panel.mat-expansion-panel.custom-expansion-theme {
+  --mat-expansion-container-background-color: transparent;
+  @extend .mb-0;
+  border: none;
+
+  & .mat-expansion-panel-content .mat-expansion-panel-body {
+    padding-inline: unset;
+  }
+  & .mat-expansion-panel-body {
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .py-0;
+    @extend .px-0;
+  }
+
+  & .custom-expansion-hover:hover {
+    --bs-bg-opacity: 0.1;
+    @extend .bg-secondary;
+  }
+
+  & .custom-expansion-hover:hover .border-secondary {
+    border-color: var(--bs-white);
+  }
+}

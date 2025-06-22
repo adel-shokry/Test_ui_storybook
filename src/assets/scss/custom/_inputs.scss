@@ -1,0 +1,94 @@
+@use '../bootstrap/base-bootstrap';
+
+// * NUMBER
+[dir='rtl'] .input-number-prefix-ltr {
+  @extend .d-none;
+}
+
+[dir='ltr'] .input-number-suffix-rtl {
+  @extend .d-none;
+}
+
+mat-form-field
+  :is(
+    [dir='rtl'] .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper,
+    [dir='rtl'] .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper,
+    .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper,
+    .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper
+  ) {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+mat-form-field div.mat-mdc-text-field-wrapper:not(.mdc-text-field--disabled) {
+  @extend .border;
+  @extend .border-bottom-0;
+}
+
+mat-form-field
+  div:is(
+    .mat-mdc-form-field-icon-prefix,
+    .mat-mdc-form-field-text-prefix,
+    .mat-mdc-form-field-icon-suffix,
+    .mat-mdc-form-field-text-suffix
+  ):has(> *:empty) {
+  @extend .d-none;
+}
+
+mat-form-field:not(.ng-value)
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-line-ripple::before {
+  @extend .opacity-50;
+}
+
+mat-form-field.ng-value
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-floating-label {
+  @extend .text-primary;
+}
+
+mat-form-field
+  div.mat-mdc-form-field-subscript-wrapper
+  div.mat-mdc-form-field-hint-wrapper,
+div.mat-mdc-form-field-error-wrapper {
+  padding-inline-start: 0;
+}
+
+mat-form-field .mdc-text-field--filled .mdc-floating-label--float-above {
+  transform: translateY(-90%) scale(0.75);
+}
+
+mat-form-field
+  div:is(.mat-mdc-form-field-text-prefix, .mat-mdc-form-field-text-suffix) {
+  @extend .align-self-center;
+  @extend .pt-1;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+mat-pseudo-checkbox + span {
+  @extend .flex-fill;
+}
+
+nwc-input-text.text-center input {
+  @extend .text-center;
+}
+
+nwc-input-text.no-marker mat-form-field .mat-mdc-form-field-required-marker {
+  @extend .d-none;
+}
+
+nwc-input-text.no-marker mat-form-field .mat-mdc-form-field-infix {
+  @extend .pt-4;
+}

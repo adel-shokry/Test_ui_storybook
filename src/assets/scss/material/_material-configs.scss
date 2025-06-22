@@ -1,0 +1,141 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$my-m3-colors: (
+  0: #000000,
+  10: #001b3f,
+  20: #0041ae,
+  25: #0053ba,
+  30: #005dc1,
+  35: #0068c8,
+  40: var(--bs-blue),
+  50: var(--bs-blue),
+  60: var(--bs-blue),
+  70: #2685d5,
+  80: #4d9bdc,
+  90: #80b8e6,
+  95: #ecf0ff,
+  98: #f9f9ff,
+  99: #fdfbff,
+  100: #ffffff,
+  secondary: (
+    0: #000000,
+    10: #131c2b,
+    20: #283041,
+    25: #333c4d,
+    30: #3e4759,
+    35: #4a5365,
+    40: #565e71,
+    50: var(--bs-gray-800),
+    60: #8891a5,
+    70: #a3abc0,
+    80: #bec6dc,
+    90: #dae2f9,
+    95: #ecf0ff,
+    98: #f9f9ff,
+    99: #fdfbff,
+    100: #ffffff,
+  ),
+  neutral: (
+    0: #000000,
+    10: #1a1b1f,
+    20: #2f3033,
+    25: #3b3b3f,
+    30: #46464a,
+    35: #525256,
+    40: var(--bs-gray-800),
+    50: var(--bs-gray-800),
+    60: var(--bs-gray-800),
+    70: #ababaf,
+    80: #c7c6ca,
+    90: #e3e2e6,
+    95: #f2f0f4,
+    98: #faf9fd,
+    99: #fdfbff,
+    100: #ffffff,
+    4: #0a0b0c,
+    6: #101013,
+    12: #1e1f23,
+    17: #292a2d,
+    22: #343438,
+    24: #39393d,
+    87: #dbdade,
+    92: #e9e8ec,
+    94: #efedf1,
+    96: #f5f3f7,
+  ),
+  neutral-variant: (
+    0: #000000,
+    10: #181c22,
+    20: #2d3038,
+    25: #383b43,
+    30: #44474e,
+    35: #4f525a,
+    40: var(--bs-gray-800),
+    50: var(--bs-gray-800),
+    60: var(--bs-gray-800),
+    70: #a9abb4,
+    80: #c4c6d0,
+    90: #e0e2ec,
+    95: #eff0fa,
+    98: #f9f9ff,
+    99: #fdfbff,
+    100: #ffffff,
+  ),
+  error: (
+    0: #000000,
+    10: #410002,
+    20: #690005,
+    25: #7e0007,
+    30: #93000a,
+    35: #a80710,
+    40: var(--bs-red),
+    50: var(--bs-red),
+    60: var(--bs-red),
+    70: #ff897d,
+    80: #ffb4ab,
+    90: #ffdad6,
+    95: #ffedea,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+);
+
+$ebranch-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $my-m3-colors,
+    ),
+    typography: (
+      plain-family: var(--mainFont),
+      brand-family: var(--mainFont),
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+:root {
+  @include mat.core-theme($ebranch-theme);
+  @include mat.sidenav-theme($ebranch-theme);
+  @include mat.form-field-theme($ebranch-theme);
+  @include mat.input-theme($ebranch-theme);
+  @include mat.checkbox-theme($ebranch-theme);
+  @include mat.radio-theme($ebranch-theme);
+  @include mat.select-theme($ebranch-theme);
+  @include mat.datepicker-theme($ebranch-theme);
+  @include mat.expansion-theme($ebranch-theme);
+  @include mat.tabs-theme($ebranch-theme);
+  @include mat.dialog-theme($ebranch-theme);
+  @include mat.slide-toggle-theme($ebranch-theme);
+  @include mat.autocomplete-theme($ebranch-theme);
+  @include mat.slider-theme($ebranch-theme);
+  @include mat.paginator-theme($ebranch-theme);
+  @include mat.tooltip-theme($ebranch-theme);
+  @include mat.menu-theme($ebranch-theme);
+  @include mat.stepper-theme($ebranch-theme);
+}

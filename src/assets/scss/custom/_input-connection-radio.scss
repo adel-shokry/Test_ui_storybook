@@ -1,0 +1,31 @@
+@use '../bootstrap/base-bootstrap';
+
+.connection-radio-container {
+  @extend .d-flex;
+  @extend .flex-wrap;
+  @extend .rounded-1;
+  @extend .overflow-hidden;
+  width: 99px;
+  min-width: 99px;
+  height: 99px;
+  min-height: 99px;
+  gap: 2.5px;
+}
+
+.connection-radio {
+  @extend .position-relative;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @extend .bg-secondary;
+  @extend .bg-opacity-10;
+  width: 31px;
+  height: 31px;
+  transition: all 0.2s ease-in;
+}
+
+.connection-radio.selected {
+  @extend .bg-success;
+  @extend .bg-opacity-100;
+  @extend .text-white;
+}

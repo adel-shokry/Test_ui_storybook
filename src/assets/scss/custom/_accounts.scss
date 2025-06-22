@@ -1,0 +1,34 @@
+.radio-mark {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  top: 1rem;
+  inset-inline-end: 1rem;
+}
+
+.alias-max-width {
+  max-width: calc(100% - 28px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+nwc-alert-message.alert-message {
+  justify-content: center;
+}
+
+.min-w-50 {
+  min-width: 50%;
+}
+
+.min-w-100 {
+  min-width: 100px;
+}
+
+.min-w-16 {
+  min-width: 16px;
+}

@@ -1,0 +1,52 @@
+@use '../bootstrap/base-bootstrap';
+
+.res-portal-bg,
+nwc-header header.RES {
+  background-image: linear-gradient(
+      rgba(var(--bs-success-rgb), 0) 0,
+      240px,
+      var(--bs-dark) 90%
+    );
+    // url('/assets/svgs/Header.svg');
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.com-portal-bg,
+nwc-header header.COM {
+  // background-image: linear-gradient(
+  //     rgba(var(--bs-success-rgb), 0) 0,
+  //     180px,
+  //     var(--bs-dark) 90%
+  //   ),
+  //   url('/assets/svgs/HeaderCOM.svg');
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gov-portal-bg,
+nwc-header header.GOV {
+  // background-image: linear-gradient(
+  //     rgba(var(--bs-success-rgb), 0) 0,
+  //     180px,
+  //     var(--bs-dark) 90%
+  //   ),
+  //   url('/assets/svgs/HeaderGov.svg');
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nwc-header header.RES {
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.1);
+}
+
+nwc-header header.COM {
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.1);
+}
+
+nwc-header header.GOV {
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.1);
+}

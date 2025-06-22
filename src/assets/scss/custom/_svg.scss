@@ -1,0 +1,19 @@
+@use '../bootstrap/base-bootstrap';
+
+.svg-big {
+  @extend .d-inline-block;
+  @extend .my-0;
+  @extend .mx-auto;
+  height: 46px;
+  width: 46px;
+  color: inherit;
+}
+
+.svg-normal {
+  @extend .d-inline-block;
+  @extend .my-0;
+  @extend .mx-auto;
+  height: 28px;
+  width: 28px;
+  color: inherit;
+}

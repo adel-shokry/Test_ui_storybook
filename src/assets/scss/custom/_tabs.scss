@@ -1,0 +1,38 @@
+@use '../bootstrap/base-bootstrap';
+
+// * material tabs
+.mat-mdc-tab-header {
+  @extend .px-0;
+  padding-block-end: 2px;
+}
+
+.mat-mdc-tab-labels,
+.mat-mdc-tab-links {
+  border-bottom: 2px solid var(--bs-primary);
+}
+
+.mdc-tab:is(.mat-mdc-tab, .mat-mdc-tab-link) {
+  @extend .bg-light-blue;
+  @extend .rounded-top-3;
+  @extend .fw-bold;
+}
+
+.mdc-tab:is(.mat-mdc-tab, .mat-mdc-tab-link).mdc-tab-indicator--active {
+  @extend .bg-primary;
+}
+
+.mdc-tab:is(.mat-mdc-tab, .mat-mdc-tab-link):not(:last-of-type) {
+  @extend .me-3;
+  @extend .me-md-4;
+}
+
+:is(.mat-mdc-tab-nav-bar, mat-tab-header)
+  span.mdc-tab-indicator
+  .mdc-tab-indicator__content {
+  @extend .d-none;
+}
+
+mat-tab-header .mat-mdc-tab-labels > * {
+  flex: 1 1 0%;
+  min-width: max-content;
+}

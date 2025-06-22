@@ -1,0 +1,63 @@
+@use '../bootstrap/base-bootstrap';
+
+.input-upload {
+  @extend .w-100;
+  @extend .d-flex;
+  @extend .align-items-stretch;
+  @extend .gap-2;
+  @extend .py-2;
+  @extend .ps-2;
+  @extend .pe-4;
+  @extend .text-primary;
+  @extend .fs-5;
+  @extend .bg-light-blue;
+  @extend .bg-opacity-100;
+  @extend .border;
+  @extend .border-light-sec-blue;
+  @extend .rounded-1;
+  @extend .z-2;
+}
+
+.input-upload.has-error {
+  @extend .text-danger;
+  @extend .bg-danger;
+  @extend .bg-opacity-10;
+  @extend .border-danger;
+}
+
+.input-upload-label {
+  @extend .flex-fill;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-around;
+  @extend .align-items-start;
+  @extend .text-start;
+  // @extend .gap-1;
+  // @extend .text-truncate;
+}
+
+.upload-delete-btn {
+  border: none;
+  outline: none;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  @extend .pe-none;
+  @extend .invisible;
+  @extend .align-self-center;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  @extend .p-0;
+  @extend .ms-auto;
+  @extend .fs-6;
+  @extend .text-white;
+  @extend .bg-danger;
+  @extend .rounded-circle;
+}
+
+.upload-delete-btn.has-value {
+  @extend .visible;
+  @extend .pe-auto;
+}

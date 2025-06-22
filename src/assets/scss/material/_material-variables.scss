@@ -1,0 +1,32 @@
+:root {
+  // inputs
+  --mat-autocomplete-background-color: var(--bs-white);
+  --mdc-filled-text-field-container-color: var(--bs-white);
+  --mat-form-field-subscript-text-line-height: 1.5rem;
+  --mdc-filled-text-field-active-indicator-height: 2px;
+  --mdc-filled-text-field-active-indicator-color: var(--bs-blue);
+
+  --mat-select-panel-background-color: var(--bs-white);
+
+  // buttons
+  --mdc-icon-button-state-layer-size: 40px;
+
+  // accordion
+  --mat-expansion-container-background-color: var(--bs-white);
+
+  // tabs
+  --mat-tab-header-active-label-text-color: var(--bs-white);
+  --mat-tab-header-active-hover-label-text-color: var(--bs-white);
+  --mat-tab-header-active-focus-label-text-color: var(--bs-white);
+
+  --mat-tab-header-inactive-label-text-color: var(--bs-blue);
+  --mat-tab-header-inactive-hover-label-text-color: var(--bs-blue);
+  --mat-tab-header-inactive-focus-label-text-color: var(--bs-white);
+
+  // popups
+  --mdc-dialog-container-shape: 0.75rem;
+
+  // side nav
+  --mat-sidenav-container-width: 100vw;
+  --mat-sidenav-container-shape: 0;
+}

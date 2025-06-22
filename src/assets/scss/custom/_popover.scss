@@ -1,0 +1,13 @@
+@use '../bootstrap/base-bootstrap';
+
+.popover {
+  --bs-popover-border-color: #ededed;
+  box-shadow: 0px 1px 3px #00000012;
+}
+
+.popover-icon {
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    @extend .text-primary;
+  }
+}

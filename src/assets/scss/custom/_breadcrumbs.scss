@@ -1,0 +1,12 @@
+@use '../bootstrap/base-bootstrap';
+
+.bread-crump {
+  @extend .d-block;
+  @extend .py-3;
+  @extend .fs-6;
+  @extend .fw-bold;
+  @extend .lh-md;
+  @extend .bg-light-blue;
+  // background: url(/assets/images/BreadCrumbBG.jpg) no-repeat center;
+  background-size: cover;
+}

@@ -1,0 +1,50 @@
+@use '../bootstrap/base-bootstrap';
+
+// * CUSTOM ERRORS, like material
+.custom-error-container {
+  @extend .w-100;
+  @extend .position-relative;
+  @extend .text-danger;
+  height: 22px;
+}
+
+.custom-error-container.custom-height {
+  @extend .position-absolute;
+  height: 10px;
+}
+
+.custom-error {
+  @extend .position-absolute;
+  @extend .top-0;
+  @extend .bottom-0;
+  // @extend .start-0;
+  @extend .end-0;
+  @extend .w-100;
+  @extend .d-flex;
+  @extend .align-items-center;
+  // @extend .px-4;
+  @extend .fs-6;
+  inset-inline-start: 1rem;
+  word-break: break-word;
+  z-index: -1;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.custom-error.has-error {
+  @extend .z-1;
+  @extend .opacity-100;
+  transform: translateY(0);
+}
+
+.custom-error,
+.input-upload,
+.upload-delete-btn {
+  transition:
+    all 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.start-5 {
+  inset-inline-start: 0.5rem;
+}

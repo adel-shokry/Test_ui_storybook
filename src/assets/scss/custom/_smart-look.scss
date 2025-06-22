@@ -1,0 +1,38 @@
+@use '../bootstrap/base-bootstrap';
+
+html
+  body
+  :is(
+    .uwy.userway_p1 .userway_buttons_wrapper,
+    .uwy.userway_p3 .userway_buttons_wrapper
+  ) {
+  top: 11px;
+}
+
+html[dir='rtl']
+  body
+  :is(
+    .uwy.userway_p1 .userway_buttons_wrapper,
+    .uwy.userway_p3 .userway_buttons_wrapper
+  ) {
+  left: calc(100vw - 21px);
+  right: unset;
+}
+
+html[dir='ltr']
+  body
+  :is(
+    .uwy.userway_p1 .userway_buttons_wrapper,
+    .uwy.userway_p3 .userway_buttons_wrapper
+  ) {
+  right: calc(100vw - 21px);
+  left: unset;
+  transform: translate(100%);
+}
+
+@media (max-width: 992px) {
+  html body .uwy.userway_p3 .userway_buttons_wrapper {
+    bottom: 19px;
+    top: calc(100vh - 19px - 50px);
+  }
+}

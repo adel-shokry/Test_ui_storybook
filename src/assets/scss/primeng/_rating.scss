@@ -1,0 +1,45 @@
+.p-rating {
+  gap: 0.5rem;
+}
+.p-rating .p-rating-item {
+  border-radius: 50%;
+  outline-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-rating .p-rating-item .p-rating-icon {
+  color: #3f51b5;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  font-size: 1rem;
+}
+.p-rating .p-rating-item .p-rating-icon.p-icon {
+  width: 1rem;
+  height: 1rem;
+}
+.p-rating .p-rating-item .p-rating-icon.p-rating-cancel {
+  color: #b00020;
+}
+.p-rating .p-rating-item.p-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+}
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: #3f51b5;
+}
+.p-rating:not(.p-disabled):not(.p-readonly)
+  .p-rating-item:hover
+  .p-rating-icon {
+  color: #3f51b5;
+}
+.p-rating:not(.p-disabled):not(.p-readonly)
+  .p-rating-item:hover
+  .p-rating-icon.p-rating-cancel {
+  color: #b00020;
+}

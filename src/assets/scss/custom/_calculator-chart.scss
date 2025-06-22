@@ -1,0 +1,63 @@
+@use '../bootstrap/base-bootstrap';
+
+nwc-gauge {
+  font-family: var(--mainFont);
+}
+
+nwc-gauge .reading-block {
+  font-size: unset !important;
+  transform: translateY(100px) !important;
+}
+
+nwc-gauge .reading-block .reading-affix:empty {
+  display: none;
+}
+
+nwc-gauge .reading-label {
+  @extend .fw-bold;
+  font-size: 14px !important;
+  transform: translateY(210px) !important;
+}
+
+nwc-gauge.first .reading-label,
+.text-first {
+  color: #00a88b;
+}
+
+nwc-gauge.second .reading-label,
+.text-second {
+  color: #a3d789;
+}
+
+nwc-gauge.third .reading-label,
+.text-third {
+  color: #ffd57c;
+}
+
+nwc-gauge.forth .reading-label,
+.text-forth {
+  color: #fc5541;
+}
+
+nwc-gauge.fifth .reading-label,
+.text-fifth {
+  color: #e91313;
+}
+
+nwc-calculator-chart {
+  // background: url('/assets/images/gauge-segments.png');
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+html[dir='ltr'] nwc-calculator-chart.unbilled {
+  // background: url('/assets/images/gauge-segments-unbilled-en.png');
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+html[dir='rtl'] nwc-calculator-chart.unbilled {
+  // background: url('/assets/images/gauge-segments-unbilled.png');
+  background-repeat: no-repeat;
+  background-position-y: center;
+}

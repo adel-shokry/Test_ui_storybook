@@ -1,0 +1,269 @@
+@use '../bootstrap/base-bootstrap';
+
+// ! set main routes styles
+.main-routes-wrapper {
+  @extend .flex-fill;
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-stretch;
+  @extend .justify-content-start;
+}
+
+.main-routes-wrapper > *:not(router-outlet) {
+  @extend .d-block;
+  @extend .container;
+  @extend .py-4;
+}
+
+.main-routes-wrapper > *:not(router-outlet).d-flex {
+  @extend .d-flex;
+}
+
+.main-routes-wrapper > *:not(router-outlet):empty {
+  @extend .d-none;
+}
+// ! END set main routes styles
+
+.user-select-text {
+  user-select: text;
+}
+
+.bottom-back-1 {
+  bottom: -0.25rem;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.w-fit-content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-min-content {
+  width: min-content;
+}
+
+.w-max-content {
+  width: max-content;
+  min-width: max-content;
+}
+
+.h-fit-content {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-max-content {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.min-h-100 {
+  min-height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.zoom-in {
+  cursor: zoom-in;
+}
+
+.zoom-out {
+  cursor: zoom-out;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.hide-empty:empty,
+.hide-empty .hide,
+.hide-empty:has(.hide-empty:empty) {
+  @extend .d-none;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.mandatory::after {
+  content: ' * ';
+  color: var(--mdc-filled-text-field-error-label-text-color);
+  font-size: 1.2em;
+  line-height: 1em;
+}
+
+body .show-desktop {
+  @extend .d-none;
+  @extend .d-lg-flex;
+}
+
+.rotate-180 {
+  rotate: 180deg;
+}
+
+html[dir='ltr'] .rotate-180-ltr {
+  transform: rotate(180deg);
+}
+
+html[dir='rtl'] .rotate-180-ltr {
+  transform: rotate(0deg);
+}
+
+html[dir='ltr'] .rotate-180-rtl {
+  transform: rotate(0deg);
+}
+
+html[dir='rtl'] .rotate-180-rtl {
+  transform: rotate(180deg);
+}
+
+html[dir='ltr'] .rotate-y-180-rtl {
+  transform: rotateY(0deg);
+}
+
+html[dir='rtl'] .rotate-y-180-rtl {
+  transform: rotateY(180deg);
+}
+
+html[dir='ltr'] .rotate-y-180-ltr {
+  transform: rotateY(180deg);
+}
+
+html[dir='rtl'] .rotate-y-180-ltr {
+  transform: rotateY(0deg);
+}
+
+html[dir='ltr'] .rotate-x-180-rtl {
+  transform: rotateX(0deg);
+}
+
+html[dir='rtl'] .rotate-x-180-rtl {
+  transform: rotateX(180deg);
+}
+
+html[dir='ltr'] .rotate-x-180-ltr {
+  transform: rotateX(180deg);
+}
+
+html[dir='rtl'] .rotate-x-180-ltr {
+  transform: rotateX(0deg);
+}
+
+html[dir='ltr'] .rotate-y-180-rtl-2 {
+  transform: rotateY(180deg);
+}
+
+html[dir='rtl'] .rotate-y-180-rtl-2 {
+  transform: rotateY(0deg);
+}
+
+.add-vertical-divider {
+  @extend .position-relative;
+}
+
+.add-vertical-divider:after {
+  content: '';
+  @extend .d-block;
+  @extend .position-absolute;
+  @extend .bg-body-secondary;
+  @extend .z-1;
+  width: 1px;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-end: 6px;
+}
+
+.header-portal-titles {
+  @extend .d-flex;
+  @extend .flex-column;
+  // @extend .gap-1;
+  font-size: 1rem;
+}
+
+[dir='ltr'] .header-portal-titles {
+  @extend .flex-column-reverse;
+}
+
+.fs-9 {
+  font-size: 0.4rem;
+}
+
+.fs-1-custom {
+  font-size: 1.75rem;
+}
+
+.fs-2-custom {
+  font-size: 2.5rem;
+}
+
+.fs-md-custom {
+  font-size: 1.5rem;
+}
+
+.fs-lg-custom {
+  font-size: 2rem;
+}
+
+.fs-xl-custom {
+  font-size: 2.75rem;
+}
+
+.fw-bolder {
+  font-weight: 900 !important;
+}
+
+.mat-mdc-dialog-surface {
+  background-color: #fff !important;
+}
+nwc-terms-top-section:has(+ form .col-lg-6 + .col-lg-6) {
+  width: 100%;
+}
+.custom-border:has(+ div div .icon-requestsewer),
+.custom-border:has(+ div div .icon-pipe-connection) {
+  border: none;
+  position: relative;
+}
+
+.custom-border:has(+ div div .icon-requestsewer):after,
+.custom-border:has(+ div div .icon-pipe-connection):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  right: 50%;
+  margin-top: -10px;
+  background: #ccc;
+  border-radius: 100%;
+}
+.bg-gradient .white-panel {
+  background: linear-gradient(#fff 0%, rgba(244, 250, 255, 0.7) 100%);
+}
+@media only screen and (min-width: 992px) {
+  .fs-lg-5 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .add-vertical-divider:after {
+    height: 1px;
+    width: calc(100% - 2rem);
+    inset-block-start: unset;
+    inset-block-end: -1rem;
+    inset-inline-start: 1rem;
+    inset-inline-end: 1rem;
+  }
+
+  .fs-md-6 {
+    font-size: 0.75rem;
+  }
+
+  .header-portal-titles {
+    font-size: 0.75rem;
+  }
+}

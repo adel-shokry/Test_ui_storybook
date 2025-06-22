@@ -1,0 +1,71 @@
+mat-calendar.mat-calendar {
+  line-height: 1;
+}
+
+nwc-date-picker mat-form-field .mat-mdc-form-field-icon-suffix {
+  display: flex;
+}
+
+// ? label
+nwc-date-picker label {
+  max-width: 100%;
+}
+
+nwc-water-pumping-schedule {
+  // water pump
+  button .mat-calendar-body-today {
+    border-color: unset !important;
+  }
+  // ? case water pumping not selected
+  button.mat-calendar-body-cell.water-pumping .mat-calendar-body-cell-content {
+    background-color: var(--bs-blue);
+    box-shadow: inset 0 0 0 1px var(--bs-blue);
+    color: var(--bs-white);
+  }
+  // ? case no water pumping not selected
+  button.mat-calendar-body-cell.no-water-pumping
+    .mat-calendar-body-cell-content {
+    background-color: var(--bs-danger);
+    box-shadow: inset 0 0 0 1px var(--bs-danger);
+    color: var(--bs-white);
+  }
+  // ? case water pumping hover
+  button.mat-calendar-body-cell.water-pumping.mat-calendar-body-cell:not(
+      .mat-calendar-body-disabled
+    ):hover
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+      .mat-calendar-body-comparison-identical
+    ) {
+    background-color: var(--bs-green);
+    box-shadow: inset 0 0 0 1px var(--bs-green);
+  }
+  // ? case NO water pumping hover
+  button.mat-calendar-body-cell.no-water-pumping.mat-calendar-body-cell:not(
+      .mat-calendar-body-disabled
+    ):hover
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+      .mat-calendar-body-comparison-identical
+    ),
+  button.mat-calendar-body-cell.no-water-pumping .mat-calendar-body-selected {
+    background-color: var(--bs-danger);
+    box-shadow: inset 0 0 0 1px var(--bs-danger);
+    color: var(--bs-white);
+  }
+  // ? case selected
+  button.mat-calendar-body-cell.mat-calendar-body-active
+    .mat-calendar-body-cell-content.mat-focus-indicator {
+    background-color: var(--bs-white);
+  }
+
+  button.mat-calendar-body-cell.mat-calendar-body-active.water-pumping
+    .mat-calendar-body-cell-content.mat-focus-indicator {
+    color: var(--bs-blue);
+    box-shadow: inset 0 0 0 1px var(--bs-blue);
+  }
+
+  button.mat-calendar-body-cell.mat-calendar-body-active.no-water-pumping
+    .mat-calendar-body-cell-content.mat-focus-indicator {
+    color: var(--bs-danger);
+    box-shadow: inset 0 0 0 1px var(--bs-danger);
+  }
+}

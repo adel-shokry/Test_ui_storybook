@@ -1,0 +1,70 @@
+@use '../bootstrap/base-bootstrap';
+
+mat-sidenav.mat-drawer {
+  top: env(safe-area-inset-top, 0);
+  bottom: env(safe-area-inset-bottom, 0);
+}
+
+nwc-side-nav {
+  @extend .d-block;
+  @extend .w-100;
+  @extend .h-100;
+
+  // background-image: url('/assets/svgs/Header.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nwc-side-nav-links {
+  @extend .d-block;
+  @extend .w-100;
+  @extend .overflow-auto;
+
+  height: calc(100vh - 16rem);
+}
+
+.navbar
+  > .side-nav-menu-item
+  .side-nav-menu-link
+  ul:has(> .link-children):hover,
+.side-nav-menu-link.show {
+  @extend .bg-white;
+  @extend .rounded-2;
+  @extend .text-primary;
+  transition: transform 0.5s ease-in-out;
+}
+
+.side-nav-menu-link.active {
+  @extend .bg-dark-blue;
+  @extend .rounded-2;
+}
+
+:is(.side-nav-menu-link.show, nwc-filter-sort-menu) .icon-expand {
+  transform: rotate(180deg);
+}
+
+.link-children .side-nav-menu-item .side-nav-menu-link,
+.link-children-services .side-nav-menu-item .side-nav-menu-link {
+  @extend .text-black;
+}
+
+.side-nav-menu-item
+  .side-nav-menu-link:has(> .link-children)
+  .link-children
+  .side-nav-menu-link:hover {
+  @extend .rounded-3;
+  @extend .bg-light-blue;
+  @extend .text-primary;
+}
+
+.side-nav-menu-item .side-nav-menu-link.link-active {
+  @extend .rounded-3;
+  @extend .bg-light-blue;
+  @extend .text-primary;
+}
+
+.side-nav-logout {
+  @extend .position-relative;
+  @extend .z-1;
+  margin-bottom: env(safe-area-inset-bottom, 0);
+}

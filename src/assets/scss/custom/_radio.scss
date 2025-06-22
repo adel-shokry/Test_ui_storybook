@@ -1,0 +1,12 @@
+@use '../bootstrap/base-bootstrap';
+
+.custom-radio-input {
+  @extend .opacity-0;
+  @extend .position-absolute;
+  @extend .z-2;
+  @extend .top-0;
+  @extend .bottom-0;
+  @extend .start-0;
+  @extend .end-0;
+  cursor: pointer;
+}
